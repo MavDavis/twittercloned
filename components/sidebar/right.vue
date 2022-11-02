@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-fit relative py-5  px-11">
+  <div class="w-full h-fit relative py-5  px-4">
     <!-- searchbar -->
     <div class="search-bar  flex justify-center items-center w-full">
       <div class="relative w-full">

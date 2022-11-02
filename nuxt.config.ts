@@ -5,7 +5,11 @@ export default defineNuxtConfig({
         head: {
           meta: [
             // <meta name="viewport" content="width=device-width, initial-scale=1">
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            
+          ],
+          css: [
+            './assets/style/style.css'
           ],
           script:[
             {src:"https://kit.fontawesome.com/87e2f7b4fa.js",
@@ -16,6 +20,7 @@ export default defineNuxtConfig({
             // <link rel="stylesheet" href="https://myawesome-lib.css">
             // { rel: 'stylesheet', href: 'https://awesome-lib.css' }
           ],
+         
           // please note that this is an area that is likely to change
           style: [
           ],
