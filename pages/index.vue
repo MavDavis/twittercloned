@@ -6,6 +6,7 @@
       <!-- Right Sidebar -->
       <div class="w-2/5 ">
         <SidebarRight/>
+        <who-to-follow/>
       </div>
 </div>
 </template>
