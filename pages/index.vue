@@ -5,7 +5,7 @@
       </div>
       <!-- Right Sidebar -->
       <div class="w-2/5 ">
-        <SidebarRight/>
+        <SidebarRight :gray = true />
         <who-to-follow/>
       </div>
 </div>

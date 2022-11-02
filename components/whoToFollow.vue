@@ -24,7 +24,11 @@
           >
             Tweet
           </button>
-    </div></div>
+    </div>
+</div>
+<p class="flex cursor-pointer justify-start items-center text-dim-500">
+    Show more
+</p>
   </div>
 </template>
 

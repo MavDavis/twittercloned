@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full h-fit relative py-5  px-4">
+  <div class="w-full h-fit relative py-5 px-4">
     <!-- searchbar -->
-    <div class="search-bar  flex justify-center items-center w-full">
+    <div class="search-bar flex justify-center items-center w-full">
       <div class="relative w-full">
         <div
           class="
@@ -38,7 +38,7 @@
       </div>
     </div>
     <!-- trends -->
-    <div class="w-full rounded-lg bg-slate-100 mt-5">
+    <div class="w-full rounded-lg  mt-5" :class="[gray?'bg-slate-100' :'bg-white']">
       <div v-for="(trend, ind) in trends.nigeriaTrend" :key="ind">
         <div class="p-3">
           <h1 class="font-bold text-xl mb-5">Nigeria Trends</h1>
@@ -50,31 +50,62 @@
         <div v-for="(postTrend, ind) in trend.posts" :key="ind">
           <div class="w-full hover:bg-slate-200 mb-2 p-3" v-if="postTrend.img">
             <p>{{ postTrend.id }}. {{ postTrend.title }} - Trending</p>
-            <div class="border-2 hover:border-white mt-1 flex items-center rounded-lg p-4 w-full relative">
-<div class="w-3/4">
-    <p>{{postTrend.img.title}}</p>
-    <p>{{postTrend.img.name}}</p>
-</div>
-<div class="w-1/4 relative">
-    <img class="w-full relative h-full" :src="postTrend.img.src" alt="img">
-</div>
+            <div
+              class="
+                border-2
+                hover:border-white
+                mt-1
+                flex
+                items-center
+                rounded-lg
+                p-4
+                w-full
+                relative
+              "
+            >
+              <div class="w-3/4">
+                <p>{{ postTrend.img.title }}</p>
+                <p>{{ postTrend.img.name }}</p>
+              </div>
+              <div class="w-1/4 relative">
+                <img
+                  class="w-full relative h-full"
+                  :src="postTrend.img.src"
+                  alt="img"
+                />
+              </div>
             </div>
           </div>
           <div class="w-full hover:bg-slate-200 mb-2 p-3" v-else>
-            <p class="text-sm ">{{ postTrend.id }}. {{ postTrend.title }} - Trending</p>
+            <p class="text-sm">
+              {{ postTrend.id }}. {{ postTrend.title }} - Trending
+            </p>
             <p class="text-lg font-semibold">{{ postTrend.desc }}</p>
             <p>{{ postTrend.tweets }}</p>
           </div>
         </div>
       </div>
+      <p
+        class="
+          px-4
+          pb-4
+          cursor-pointer
+          flex
+          justify-start
+          items-center
+          text-dim-500
+        "
+      >
+        Show more
+      </p>
     </div>
-    <div class="w-full rounded-lg bg-slate-100 mt-5">
-
-</div>
   </div>
 </template>
 
 <script setup>
+ const props = defineProps(['gray'])
+
+console.log(props.gray)
 const trends = ref({
   nigeriaTrend: [
     {
@@ -88,7 +119,7 @@ const trends = ref({
           tweets: "30.5k",
           id: 1,
           img: {
-            title:'Premier League',
+            title: "Premier League",
             name: "Man u vs Tottenham",
             src: "",
           },
@@ -102,7 +133,7 @@ const trends = ref({
           tweets: "21k",
           id: 5,
           img: {
-            title:'Champions League',
+            title: "Champions League",
             name: "Chelsea vs Tottenham",
             src: "",
           },
@@ -115,5 +146,4 @@ const trends = ref({
 });
 </script>
 
-<style>
-</style>
+<style></style>
