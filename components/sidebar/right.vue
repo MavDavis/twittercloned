@@ -105,7 +105,6 @@
 <script setup>
  const props = defineProps(['gray'])
 
-console.log(props.gray)
 const trends = ref({
   nigeriaTrend: [
     {

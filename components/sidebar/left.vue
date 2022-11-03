@@ -34,7 +34,7 @@
 
 <script setup>
 const links = ref([
-{icon:"fa-solid fas fa-house", name:'Home',params:'index'},
+{icon:"fas  fa-house", name:'Home',params:'index'},
 {icon:'fa-regular fa-hashtag', name:'Explore'},
 {icon:'fa-regular fa-bell', name:'Notification'},
 {icon:'fa-regular fa-envelope', name:'Messages', params:'chat'},
