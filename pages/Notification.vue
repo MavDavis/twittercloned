@@ -28,7 +28,7 @@
         </p>
       </div>
       <!-- tweets -->
-      <div v-if="allActive" class="border-b">h</div>
+      <div v-if="allActive" class=""></div>
       <div v-else class="border-b">
         <img src="../assets/notification.png" alt="" />
         <div class="px-8 py-4">
@@ -95,16 +95,23 @@
         </div>
       </div>
       <div v-else>
-        <div class="" v-for="(item, index) in tweets" :key="index">
+        <div class="p-4" v-for="(item, index) in tweets" :key="index">
           <div class="flex justify-between w-full items-center">
-          <!-- img -->
-     <div  class="flex items-center ">     <i class="fa-regular fa-heart"></i>
-          <div class="justify-center  items-center flex img w-12 h-12 rounded-full bg-dim-500 mr-2">
-    <img class=" relative" src="" alt="">
-  </div>  </div>        <!-- icon -->
-  <i class="fa-solid fa-ellipsis"></i>
-</div>
-</div>
+            <!-- img -->
+            <div class="flex items-center">
+              <i class="fa-regular fa-heart"></i>
+              <div
+                class="justify-center items-center flex img w-8 h-8 rounded-full bg-dim-500 ml-2"
+              >
+                <img class="relative" src="" alt="" />
+              </div>
+            </div>
+            <!-- icon -->
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <p class="font-semibold text-sm">{{ item.name }}</p>
+          <p class="text-lg">{{item.tweet}}</p>
+        </div>
       </div>
     </div>
     <!-- Right Sidebar -->
