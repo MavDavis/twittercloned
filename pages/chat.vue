@@ -39,10 +39,18 @@
     </div>
     <!-- Right Sidebar -->
     <div class="w-3/5">
-      <div v-if="messages.length > 0">
-      <div v-for="msg, ind in messages" :key="ind">
+      <!-- profile -->
+      <div class="flex flex-col items-center py-4 mx-2 justify-center w-full border-b">
+        <div
+                class="justify-center items-center flex img w-8 h-8 rounded-full bg-dim-500 ml-2"
+              >
+                <img class="relative" src="" alt="" />
+              </div>
+      </div>
+      <div class="p-4" v-if="messages.length > 0">
+      <div class="" v-for="msg, ind in messages" :key="ind">
       <!--  -->
-<p class="mb-3 max-w-3/4" :class="[msg.userId == 1 ? 'bg-dim-500' : 'bg-red-300']">{{msg.message}}</p>
+<p class="mb-3  rounded-full px-4 text-sm py-2 w-fit flex relative justify-center chat-para h-fit items-center" :class="[msg.userId == 1 ? 'bg-dim-500 ml-auto' : 'bg-slate-200 mr-auto']">{{msg.message}}</p>
     </div>
       </div>
     </div>
@@ -75,7 +83,7 @@ const chat = ref([
       { userId: 2, message: "hy", time: "02-sept,2022" },
       {
         userId: 2,
-        message: "Do you have those papers ready?",
+        message: "Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?Do you have those papers ready?",
         time: "02-sept,2022",
       },
       {
@@ -89,10 +97,21 @@ const chat = ref([
   },
 ]);
 const messages = ref([]);
+const user = ref({});
 const showChat = (id) => {
   let msg = chat.value.find((item) => item.userId == id);
   messages.value = msg.message;
+  user.value = {
+    name:'',
+    img:''
+  }
 };
 </script>
 
-<style></style>
+<style scoped>
+.chat-para{
+  max-width: 75%;
+  width: fit-content;
+  height: fit-content;
+}
+</style>
