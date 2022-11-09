@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-full h-full relative">
-    <div class="w-3/5 border-x min-h-screen h-full relative">
+    <div class="xs:w-5/6 w-full sm:w-3/5  border-x min-h-screen h-full relative">
       <!-- top -->
       <div>
         <page-header :name="user.name" nomOfTweets="61" :py="true" />
@@ -62,7 +62,7 @@
       </div>
     </div>
     <!-- Right Sidebar -->
-    <div class="w-2/5 mb-4">
+    <div class="sm:w-3/5 xs:w-1/6 w-0 hidden sm:block mb-4">
       <!-- show all the first eight tweets(images) in a grid view -->
       <div class="mx-4"><searchbar placeholder="search Twitter" />
       <who-to-follow title="You may like" /></div>

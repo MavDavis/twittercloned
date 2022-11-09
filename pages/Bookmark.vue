@@ -1,6 +1,6 @@
 <template>
   <div class="flex w-full">
-    <div class="w-3/5 border-x min-h-screen h-full">
+    <div class="xs:w-5/6 w-full sm:w-3/5  border-x min-h-screen h-full">
       <div class="flex flex-col justify-center pt-4">
         <page-header name="Bookmarks" :py = true />
         <p class="px-4">@Mavdaves</p>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <!-- Right Sidebar -->
-    <div class="w-2/5">
+    <div class="sm:w-2/5 w-1/6 hidden sm:block">
       <SidebarRight :gray="true" />
       <who-to-follow title="Who to follow"/>
     </div>
