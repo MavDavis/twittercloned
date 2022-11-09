@@ -1,6 +1,6 @@
 <template>
      <div class="max-w-full rounded-lg bg-slate-100 p-4 m-4">
-  <h1 class="font-bold text-xl mb-5 ">Who to follow</h1>
+  <h1 class="font-bold text-xl mb-5 ">{{title}}</h1>
 
   <div class="flex w-full items-center flex-col">
     <div
@@ -15,24 +15,26 @@
         <img class="relative" :src="person.img" alt="" />
       </div>
       <div class=" items-start flex flex-col">
-        <p>{{person.name}}</p>
-        <p>@{{person.nickname}}</p>
+        <p class="text-sm">{{person.name}}</p>
+        <p class="text-sm">@{{person.nickname}}</p>
       </div>
     </div>
       <button
             class="flex items-center justify-center w-20 relative py-1 text-sm rounded-full my-1 hover:bg-dim-800 bg-dim-900 text-white"
           >
-            Tweet
+            Follow
           </button>
     </div>
 </div>
-<p class="flex cursor-pointer justify-start items-center text-dim-500">
+<p class="flex cursor-pointer text-sm justify-start items-center text-dim-500">
     Show more
 </p>
   </div>
 </template>
 
 <script setup>
+ const props = defineProps(['title'])
+
 const whoToFollow = ref([
   { name: "PulseNigeria", nickname: "pulseSportNG", img: "" },
   { name: "Jeyi Adole", nickname: "Jeyvers", img: "" },

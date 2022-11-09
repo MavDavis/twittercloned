@@ -27,7 +27,7 @@
               {{ msg.message[msg.message.length - 1].time }}
             </p>
           </div>
-          <p>
+          <p class="text-sm">
             <span v-if="msg.message[msg.message.length - 1].userId != 1">
               {{ msg.name }} sent
             </span>

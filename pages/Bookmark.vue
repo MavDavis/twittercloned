@@ -14,7 +14,7 @@
     <!-- Right Sidebar -->
     <div class="w-2/5">
       <SidebarRight :gray="true" />
-      <who-to-follow />
+      <who-to-follow title="Who to follow"/>
     </div>
   </div>
 </template>

@@ -63,13 +63,13 @@
                 </p>
                 <i class="fa-solid fa-ellipsis"></i>
               </div>
-              <p>
+              <p class="text-sm">
                 Replying to
                 <span class="cursor-pointer text-dim-500 hover:text-underline"
                   >@username</span
                 >
               </p>
-              <p>{{ item.tweet }}</p>
+              <p class="text-sm">{{ item.tweet }}</p>
               <div class="flex justify-between w-5/6 pt-2">
                 <div class="flex items-center cursor-pointer">
                   <i class="fa-regular fa-comment"></i>
@@ -110,14 +110,14 @@
             <i class="fa-solid fa-ellipsis"></i>
           </div>
           <p class="font-semibold text-sm">{{ item.name }}</p>
-          <p class="text-lg">{{item.tweet}}</p>
+          <p class="text-sm">{{item.tweet}}</p>
         </div>
       </div>
     </div>
     <!-- Right Sidebar -->
     <div class="w-2/5">
       <SidebarRight :gray="true" />
-      <who-to-follow />
+      <who-to-follow  title="Who to follow"/>
     </div>
   </div>
 </template>

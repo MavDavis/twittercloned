@@ -5,7 +5,7 @@
           </div>
           <!-- Right Sidebar -->
           <div class="w-2/5 ">
-            <who-to-follow/>
+            <who-to-follow  title="Who to follow"/>
           </div>
     </div>
     </template>

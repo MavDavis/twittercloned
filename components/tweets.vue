@@ -24,7 +24,7 @@
                 </p>
                 <i class="fa-solid fa-ellipsis"></i>
               </div>
-              <p>{{ item.tweets }}</p>
+              <p class="text-sm">{{ item.tweets }}</p>
               <div class="flex justify-between w-5/6  pt-2">
                 <div class="flex items-center cursor-pointer">
                   <i class="fa-regular fa-comment"></i>
@@ -54,7 +54,7 @@
                 <i class="fa-solid fa-ellipsis"></i>
               </div>
               <div class="h-96 border w-full"><img src="" alt="" /></div>
-              <p>{{ item.tweets }}</p>
+              <p class="text-sm">{{ item.tweets }}</p>
               <div class="flex w-5/6 justify-between pt-2">
                 <div class="flex items-center cursor-pointer">
                   <i class="fa-regular fa-comment"></i>

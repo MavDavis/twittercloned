@@ -1,14 +1,14 @@
 <template>
   <div :class="{ dark: darkMode }">
     <div
-      class="w-screen max-w-full h-full min-h-screen flex  "
+      class="w-screen max-w-full h-full relative min-h-screen flex  "
     >
       <!-- LeftSideBar -->
       <div class="w-1/4 h-screen sticky top-0">
         <SidebarLeft/>
       </div>
       <!-- Main Content -->
-      <div class="w-3/4 min-h-screen h-full">
+      <div class="w-3/4 min-h-screen  h-full relative">
 <NuxtPage/>
       </div>
     </div>

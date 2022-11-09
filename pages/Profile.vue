@@ -1,6 +1,6 @@
 <template>
-  <div class="flex w-full">
-    <div class="w-3/5 border-x min-h-screen h-full">
+  <div class="flex w-full h-full relative">
+    <div class="w-3/5 border-x min-h-screen h-full relative">
       <!-- top -->
       <div>
         <page-header :name="user.name" nomOfTweets="61" :py="true" />
@@ -11,37 +11,81 @@
           <img src="" alt="" />
           <div class="hover"></div>
         </div>
-        <button class="editProfile font-semibold text-xs hover:bg-slate-200 border rounded-full px-2 py-1">Edit profile</button>
+        <button
+          class="editProfile font-semibold text-xs hover:bg-slate-200 border rounded-full px-2 py-1"
+        >
+          Edit profile
+        </button>
       </div>
 
-
       <!-- details -->
-<div class="relative top-20 px-4 ">
-<div class="my-4">  <h3 class="text-xl font-bold">{{user.name}}</h3>
-  <p class="text-xs">@{{user.name}}</p></div>
-  <!-- about -->
-  <p class="text-sm">Software Engineer - JavaScript: Vue.js  | Nuxt.js  |  Node.js http://github.com/MavDavis
-Music producer,</p>
-<div class="flex">
-  <p><i class="fas fa-location"></i>{{user.location}}</p>
-</div>
-</div>  
-
-</div>
+      <div class="relative top-20 px-4">
+        <div class="my-4">
+          <h3 class="text-xl font-bold">{{ user.name }}</h3>
+          <p class="text-xs">@{{ user.name }}</p>
+        </div>
+        <!-- about -->
+        <p class="text-sm">
+          Software Engineer - JavaScript: Vue.js | Nuxt.js | Node.js
+          http://github.com/MavDavis Music producer,
+        </p>
+        <div class="flex flex-wrap">
+          <p class="flex items-center mr-2 text-sm cursor-pointer">
+            <i class="fas fa-location-dot"></i><span>{{ user.location }}</span>
+          </p>
+          <p
+            v-if="user.link"
+            class="flex text-sm cursor-pointer items-center mr-2"
+          >
+            <i class="fa-solid fa-link"></i><span>{{ user.link }}</span>
+          </p>
+          <p class="flex items-center mr-2 text-sm cursor-pointer">
+            <i class="fas fa-balloons">b</i><span>{{ user.birthday }}</span>
+          </p>
+          <p class="flex items-center mr-2 text-sm cursor-pointer">
+            <i class="fas fa-location-dot"></i><span>{{ user.join }}</span>
+          </p>
+        </div>
+        <div class="flex mt-2">
+          <p class="mr-2 text-sm">{{ user.followers }} followers</p>
+          <p class="text-sm">{{ user.following }} following</p>
+        </div>
+        <div class="w-full flex justify-between mt-2">
+          <p @click="count()" class="hover:bg-slate-200 p-2 cursor-pointer">
+            Tweets
+          </p>
+          <p class="hover:bg-slate-200 p-2 cursor-pointer">Tweets & replies</p>
+          <p class="hover:bg-slate-200 p-2 cursor-pointer">Media</p>
+          <p class="hover:bg-slate-200 p-2 cursor-pointer">Likes</p>
+        </div>
+      </div>
+    </div>
     <!-- Right Sidebar -->
-    <div class="w-2/5"></div>
+    <div class="w-2/5 ">
+      <!-- show all the first eight tweets(images) in a grid view -->
+      <div class="mx-4"><searchbar placeholder="search Twitter" /></div>
+      <who-to-follow title="You may like" />
+      <div class="bg-slate-100 rounded-lg mx-4">
+        <niger-trend />
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 const user = ref({
-  name:'User',
-  location:'Abuja, Nigeria'
+  name: "User",
+  location: "Abuja, Nigeria",
+  link: "http://github.com/MavDavis",
+  birthday: "03 March 2000",
+  join: "03 September 2022",
+  following: 65,
+  followers: 19,
 });
 </script>
 
 <style scoped>
-.editProfile{
+.editProfile {
   position: absolute;
   bottom: -25%;
   right: 1rem;
