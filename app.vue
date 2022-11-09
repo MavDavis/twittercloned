@@ -14,7 +14,7 @@
 <NuxtPage/>
       </div>
     </div>
-    <div class="fixed bottom-0 left-0 w-full h-fit py-2 bg-white flex">
+    <div class="fixed bottom-0 left-0 w-full h-fit py-2 bg-white xxs:hidden flex">
       <nav>
   <ul class="flex justify-between items-center w-screen relative">
     <li v-for="item,ind in links" :key="ind">
@@ -32,10 +32,9 @@ const darkMode = ref(true);
 const IWantToTweet = ref(false)
 const links = ref([
 {icon:"fas  fa-house", name:'Home',params:'index'},
-{icon:'fa-solid fa-search', name:'explore'},
+{icon:'fa-solid fa-search', name:'Explore'},
 {icon:'fa-regular fa-bell', name:'Notification'},
 {icon:'fa-regular fa-envelope', name:'Messages', params:'chat'},
-// {icon:'', name:'More'},
 ])
 </script>
 <style>
