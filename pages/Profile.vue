@@ -58,13 +58,14 @@
           <p class="hover:bg-slate-200 p-2 cursor-pointer">Media</p>
           <p class="hover:bg-slate-200 p-2 cursor-pointer">Likes</p>
         </div>
+        <tweets/>
       </div>
     </div>
     <!-- Right Sidebar -->
-    <div class="w-2/5 ">
+    <div class="w-2/5 mb-4">
       <!-- show all the first eight tweets(images) in a grid view -->
-      <div class="mx-4"><searchbar placeholder="search Twitter" /></div>
-      <who-to-follow title="You may like" />
+      <div class="mx-4"><searchbar placeholder="search Twitter" />
+      <who-to-follow title="You may like" /></div>
       <div class="bg-slate-100 rounded-lg mx-4">
         <niger-trend />
       </div>

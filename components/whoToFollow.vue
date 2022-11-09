@@ -1,6 +1,6 @@
 <template>
-     <div class="max-w-full rounded-lg bg-slate-100 p-4 m-4">
-  <h1 class="font-bold text-xl mb-5 ">{{title}}</h1>
+     <div class="max-w-full rounded-lg p-4 my-4" :class="[white?'bg-white':' bg-slate-100 ']">
+  <h1 class="font-bold text-lg mb-5 ">{{title}}</h1>
 
   <div class="flex w-full items-center flex-col">
     <div
@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
- const props = defineProps(['title'])
+ const props = defineProps(['title', 'white'])
 
 const whoToFollow = ref([
   { name: "PulseNigeria", nickname: "pulseSportNG", img: "" },

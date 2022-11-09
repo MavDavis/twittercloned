@@ -1,5 +1,7 @@
 <template>
   <div :class="{ dark: darkMode }">
+    <ModalTweet v-if="IWantToTweet"/>
+
     <div
       class="w-screen max-w-full h-full relative min-h-screen flex  "
     >
@@ -16,6 +18,7 @@
 </template>
 <script setup>
 const darkMode = ref(true);
+const IWantToTweet = ref(false)
 </script>
 <style>
 *{
