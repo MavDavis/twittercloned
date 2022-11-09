@@ -36,7 +36,6 @@ const links = ref([
 {icon:'fa-regular fa-bell', name:'Notification'},
 {icon:'fa-regular fa-envelope', name:'Messages', params:'chat'},
 // {icon:'', name:'More'},
-
 ])
 </script>
 <style>
