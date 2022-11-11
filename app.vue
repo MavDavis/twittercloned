@@ -18,7 +18,7 @@
       <nav>
   <ul class="flex justify-between items-center w-screen relative">
     <li v-for="item,ind in links" :key="ind">
-      <NuxtLink  class="flex items-center px-5 py-1 text-lg rounded-full my-1 hover:bg-slate-200"  :to="{name:item.params ? item.params :item.name}">
+      <NuxtLink  class="flex items-center px-2  py-1 text-lg rounded-full my-1 hover:bg-slate-200"  :to="{name:item.params ? item.params :item.name}">
     <i :class="item.icon"></i>
   </NuxtLink>
     </li>

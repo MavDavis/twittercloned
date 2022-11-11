@@ -53,7 +53,7 @@
                 </p>
                 <i class="fa-solid fa-ellipsis"></i>
               </div>
-              <div class="xs:h-96  h-36 rounded-lg my-2 border w-full"><img src="" alt="" /></div>
+              <div class="xs:h-96  h-36 rounded-lg my-2 rborder w-full"><img src="" alt="" /></div>
               <p class="text-sm">{{ item.tweets }}</p>
               <div class="flex w-5/6 justify-between pt-2">
                 <div class="flex items-center cursor-pointer">

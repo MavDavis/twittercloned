@@ -1,8 +1,6 @@
 <template>
   <div class=" px-5 w-1/12 lg:w-1/4  h-screen top-0 left-0 fixed py-5 xxs:block hidden">
-   <div class=""> <div class="w-8 h-8 px-5 mb-5">
-      <i class="fa-brands fa-twitter text-xl text-dim-500 cursor-pointer hover:text-dim-600"></i>
-    </div></div>
+  <logo/>
     <!-- nav-links -->
     <div class="w-full 
     //flexflex-colitems-end">
