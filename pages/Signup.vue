@@ -15,7 +15,7 @@
 <span>Sign in with Apple</span>
     </button>
     or
-    <button
+    <button @click="signUpClickOn"
         class="w-full xs:w-3/5 border rounded-full p-1 text-xs my-4 py-2 text-white bg-dim-900"
       >
       Sign up with email
@@ -24,12 +24,19 @@
     <p class="relative mt-8">Have an account already <NuxtLink class="text-dim-500 font-semibold" to="/Login">Log in</NuxtLink></p>
   </div>
   </register>
+  <ModalSignup v-if="signUpClicked" @closeModal="signUpClickOff()"/>
+
 </template>
 
-<script>
-export default {
-
+<script setup>
+const signUpClicked = ref(false)
+const signUpClickOn = ()=>{
+  signUpClicked.value = true
 }
+const signUpClickOff = ()=>{
+  signUpClicked.value = false
+}
+
 </script>
 
 <style>

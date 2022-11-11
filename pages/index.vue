@@ -12,7 +12,12 @@
 </template>
 
 <script setup>
-
+const loggedIn = ref(false)
+const router = useRouter()
+onMounted(() => {
+  if(loggedIn.value == false){
+router.push('/Explore')  }
+})
 </script>
 
 <style>

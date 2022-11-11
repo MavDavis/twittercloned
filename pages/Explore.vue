@@ -5,13 +5,47 @@
           </div>
           <!-- Right Sidebar -->
           <div class="sm:w-3/5 xs:w-1/6 w-0 hidden sm:block px-4">
-            <who-to-follow  title="Who to follow"/>
+            <who-to-follow  title="Who to follow" v-if="loggedIn"/>
+            <div class="w-full rounded-lg border my-4 py-4" v-else>
+              <div class="flex justify-center ">
+      <div class="w-fit"><page-header name="New to Twitter" /></div>
+    </div>
+    <div class="flex flex-col items-center w-full  mx-auto px-4 ">
+      <button
+        class="w-full xs:w-3/5 border rounded-full p-1 text-sm col hover:border-dim-100"
+      >
+        Google signin
+      </button>
+      <button
+        class="w-full xs:w-3/5 border rounded-full p-1 text-sm my-4 hover:bg-slate-100"
+      ><i class="fa-brands fa-apple mr-2"></i>
+<span>Sign in with Apple</span>
+    </button>
+    or
+    <button @click="signUpClickOn()"
+        class="w-full xs:w-3/5 border rounded-full p-1 text-xs my-4 py-2 text-white bg-dim-900"
+      >
+      Sign up with email
+      </button>
+      <p class="w-full xs:w-3/5 text-sm">By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</p>
+  </div>
+            </div>
           </div>
     </div>
+    <ModalSignup v-if="signUpClicked" @closeModal="signUpClickOff()"/>
     </template>
     
     <script setup>
-    
+const signUpClicked = ref(false)
+const signUpClickOn = ()=>{
+  signUpClicked.value = true
+}
+const signUpClickOff = ()=>{
+  signUpClicked.value = false
+}
+
+    const loggedIn = ref(false)
+
     </script>
     
     <style>

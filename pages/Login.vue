@@ -1,11 +1,12 @@
 <template>
   <register>
+  <div v-if="!nextClicked" class="w-full">
     <div class="flex justify-center ">
       <div class="w-fit"><page-header name="Sign into twitter" /></div>
     </div>
-    <div class="flex flex-col items-center w-full  mx-auto px-4 ">
+    <div class="flex flex-col items-center w-full relative mx-auto px-4 ">
       <button
-        class="w-full xs:w-3/5 border rounded-full p-1 text-sm col hover:border-dim-100"
+        class="w-full xs:w-3/5  border rounded-full p-1 text-sm col hover:border-dim-100"
       >
         Google signin
       </button>
@@ -16,26 +17,87 @@
     </button>
     or
       <input type="text"
-      placeholder="Phone, email or Username"
-        class="w-full xs:w-3/5 border rounded-lg p-2 text-lg "
+      v-model="email"
+      placeholder="Email or Username"
+        class="block
+            p-4
+            xs:w-3/5 w-full
+            text-sm text-gray-900
+            border border-slate-200
+            rounded-lg
+            focus:outline-none
+            active:outline-none active:border-dim-500
+            focus:ring-1 focus:ring-dim-500 "
       />
-      <button
-        class="w-full xs:w-3/5 border rounded-full p-1 text-xs my-4 py-2 text-white bg-dim-900"
+      <button @click="nextclick()"
+        class="w-full xs:w-3/5 border rounded-full p-1 text-lg my-4 py-2 text-white bg-dim-900"
       >
       Next
       </button>
-      <button
-        class="w-full xs:w-3/5 border rounded-full p-1 text-sm hover:bg-slate-100"
+      <NuxtLink to="/forgotPassword"
+        class="w-full xs:w-3/5 border rounded-full p-1 text-sm flex justify-center hover:bg-slate-100"
       >
        Forgot Password
-      </button>
+      </NuxtLink>
       <p class="relative mt-8">Don't have an account? <NuxtLink class="text-dim-500 font-semibold" to="/Signup">Signup</NuxtLink></p>
     </div>
+  </div>
+  <div v-else class="w-full mx-auto flex flex-col items-center h-full relative">
+    <div class="w-fit"><page-header name="Enter your password" /></div>
+
+    <input type="text"
+      v-model="email"
+      placeholder="Email or Username"
+      disabled
+        class="block
+            p-4
+            xs:w-3/4 w-full
+            bg-slate-100
+            text-sm text-slate-400
+            border border-slate-300
+            rounded-lg
+            focus:outline-none
+            active:outline-none active:border-dim-500
+            focus:ring-1 focus:ring-dim-500 mb-5 "
+      /><input :type="type"
+      v-model="password"
+      placeholder="Password"
+        class=" block
+            p-4
+            xs:w-3/4 w-full
+            text-sm text-gray-900
+            border border-slate-200
+            rounded-lg
+            focus:outline-none
+            active:outline-none active:border-dim-500
+            focus:ring-1 focus:ring-dim-500 "
+      />
+   
+   <NuxtLink to="/forgotPassword" class="w-full flex justify-start pl-20 text-dim-500 cursor-pointer">forgot password?</NuxtLink>
+  <div class="mt-auto w-full relative flex flex-col items-center">
+    <button
+        class="w-full xs:w-3/4 border rounded-full text-lg p-3"
+        :class="[password.length>0? 'bg-dim-900 text-white':'bg-slate-300']"
+        :disabled="password.length<0? true:false"
+      >Log in
+      </button>
+      <p class="relative my-8">Don't have an account? <NuxtLink class="text-dim-500 font-semibold" to="/Signup">Signup</NuxtLink></p>
+  </div> </div>
   </register>
 </template>
 
-<script>
-export default {};
+<script setup>
+
+const nextClicked = ref(false)
+const email = ref('')
+const type = ref('password')
+
+const password = ref('')
+const nextclick= function(){
+if(email.value != ''){
+  nextClicked.value = true
+}
+}
 </script>
 
 <style scoped>

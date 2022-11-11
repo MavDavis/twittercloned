@@ -1,5 +1,5 @@
 <template>
-     <div class="max-w-full  rounded-lg p-4 m-4" :class="[white?'bg-white':' bg-slate-100 ']">
+     <div class="max-w-full   relative  rounded-lg p-4 m-4" :class="[white?'bg-white':' bg-slate-100 ']">
   <h1 class="font-bold text-lg mb-5 ">{{title}}</h1>
 
   <div class="flex w-full items-center flex-col">
