@@ -25,10 +25,22 @@
   </ul>
 </nav>
     </div>
+    <div class="w-full fixed bottom-0 left-0 h-fit py-2 bg-dim-500 flex pl-11 justify-between" v-if="!loggedIn">
+   <div class="flex flex-col items-center">
+    <h1>
+Don’t miss what’s happening</h1>
+<p>People on Twitter are the first to know.
+</p>
+   </div>
+   <div class="flex items-center">
+    
+   </div>
+    </div> 
   </div>
 </template>
 <script setup>
 const darkMode = ref(true);
+const loggedIn = ref(false)
 const IWantToTweet = ref(false)
 const links = ref([
 {icon:"fas  fa-house", name:'Home',params:'index'},
