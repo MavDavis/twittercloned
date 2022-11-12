@@ -1,9 +1,10 @@
 <template>
-  <register>
+  <div class="w-full">
+    <register>
     <div class="flex justify-center ">
       <div class="w-fit"><page-header name="Join twitter" /></div>
     </div>
-    <div class="flex flex-col items-center w-full  mx-auto px-4 ">
+    <div class="flex flex-col items-center w-full  mx-auto px-8 ">
       <button
         class="w-full xs:w-3/5 border rounded-full p-1 text-sm col hover:border-dim-100"
       >
@@ -21,10 +22,11 @@
       Sign up with email
       </button>
       <p class="w-full xs:w-3/5 text-sm">By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</p>
-    <p class="relative mt-8">Have an account already <NuxtLink class="text-dim-500 font-semibold" to="/Login">Log in</NuxtLink></p>
+    <p class="relative mt-8">Have an account already <NuxtLink class="text-dim-500 font-semibold" to="/login">Log in</NuxtLink></p>
   </div>
   </register>
   <ModalSignup v-if="signUpClicked" @closeModal="signUpClickOff()"/>
+  </div>
 
 </template>
 

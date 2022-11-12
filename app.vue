@@ -25,20 +25,29 @@
   </ul>
 </nav>
     </div>
-    <div class="w-full fixed bottom-0 left-0 h-fit py-2 bg-dim-500 flex pl-11 justify-between" v-if="!loggedIn">
-   <div class="flex flex-col items-center">
-    <h1>
+    <div class="w-full fixed bottom-0 left-0 h-fit py-2 xs:bg-dim-500 bg-white flex  sm:pl-40 xs:pl-10 pl-4 justify-between" v-if="!loggedIn">
+   <div class=" flex-col items-center xs:flex hidden">
+    <h1 class="text-white text-sm xs:text-lg font-bold">
 Don’t miss what’s happening</h1>
-<p>People on Twitter are the first to know.
+<p class="text-white xs:text-lg text-sm">People on Twitter are the first to know.
 </p>
    </div>
-   <div class="flex items-center">
-    
+   <div class="flex items-center xs:justify-start justify-between w-full xs:w-1/3 sm:w-1/4">
+    <button class="flex  xs:border items-center justify-center w-1/2 mr-2 relative py-1 text-lg font-bold rounded-full  hover:bg-dim-600 bg-dim-500 text-white ">
+      <NuxtLink class="w-full" to="/Login">Login</NuxtLink>
+    </button>
+    <button class="flex xs:border-0 border-2  items-center justify-center w-1/2 relative mr-2 py-1 text-lg font-bold rounded-full hover:bg-slate-200 bg-white text-dim-900 ">
+      <NuxtLink class="w-full" to="/Signup">Signup</NuxtLink>
+    </button>
+ 
    </div>
     </div> 
   </div>
 </template>
 <script setup>
+import { useStore } from 'vuex'
+const store = useStore()
+console.log(store.state.counter);
 const darkMode = ref(true);
 const loggedIn = ref(false)
 const IWantToTweet = ref(false)

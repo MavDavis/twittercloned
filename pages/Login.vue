@@ -1,10 +1,11 @@
 <template>
+<div class="w-full">
   <register>
   <div v-if="!nextClicked" class="w-full">
     <div class="flex justify-center ">
       <div class="w-fit"><page-header name="Sign into twitter" /></div>
     </div>
-    <div class="flex flex-col items-center w-full relative mx-auto px-4 ">
+    <div class="flex flex-col items-center w-full relative mx-auto px-8 ">
       <button
         class="w-full xs:w-3/5  border rounded-full p-1 text-sm col hover:border-dim-100"
       >
@@ -84,6 +85,7 @@
       <p class="relative my-8">Don't have an account? <NuxtLink class="text-dim-500 font-semibold" to="/Signup">Signup</NuxtLink></p>
   </div> </div>
   </register>
+</div>
 </template>
 
 <script setup>

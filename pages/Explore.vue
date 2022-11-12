@@ -1,5 +1,6 @@
 <template>
-    <div class="flex w-full">
+<div class="w-full">
+  <div class="flex w-full">
       <div class="xs:w-5/6 w-full sm:w-3/5  border-x  min-h-screen h-full">
         <SidebarRight :gray= false />
           </div>
@@ -33,6 +34,7 @@
           </div>
     </div>
     <ModalSignup v-if="signUpClicked" @closeModal="signUpClickOff()"/>
+</div>
     </template>
     
     <script setup>
