@@ -9,7 +9,8 @@
       <button
         class="w-full xs:w-3/5  border rounded-full p-1 text-sm col hover:border-dim-100"
       >
-        Google signin
+        Google signin     <i class="fa-duotone fa-bus-alt" style="--fa-primary-color: gold;"></i>  <!-- primary layer color defined -->
+
       </button>
       <button
         class="w-full xs:w-3/5 border rounded-full p-1 text-sm my-4 hover:bg-slate-100"

@@ -1,6 +1,6 @@
 <template>
   <register>
-    <div class="h-full relative w-full flex flex-col items-center">
+    <div class="h-full relative w-full flex flex-col items-center  px-4">
       <div class="flex justify-center">
         <div class="w-fit">
           <page-header
