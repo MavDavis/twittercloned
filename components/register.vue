@@ -24,9 +24,13 @@
 <script setup>
  const props = defineProps(['logo'])
  const emit = defineEmits(['closeModal'])
-
+const router = useRouter();
     const closeModal = () => {
+      if(props.logo){
         emit('closeModal')
+    }else{
+      router.push("/Explore");
+    }
     }
 </script>
 

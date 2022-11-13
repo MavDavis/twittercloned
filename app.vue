@@ -45,9 +45,9 @@ Don’t miss what’s happening</h1>
   </div>
 </template>
 <script setup>
-// import { useStore } from 'vuex'
-// const store = useStore()
-// console.log(store.state.counter);
+import { defineComponent, useStore } from '@nuxtjs/composition-api'
+
+   const store = useStore()
 const darkMode = ref(true);
 const loggedIn = ref(false)
 const IWantToTweet = ref(false)

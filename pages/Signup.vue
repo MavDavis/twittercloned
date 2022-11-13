@@ -6,9 +6,10 @@
     </div>
     <div class="flex flex-col items-center w-full  mx-auto px-8 ">
       <button
-        class="w-full xs:w-3/5 border rounded-full p-1 text-sm col hover:border-dim-100"
+        class="w-full xs:w-3/5 flex justify-center  border rounded-full p-1 text-sm col hover:border-dim-100"
       >
-        Google signin
+      <img class="h-5 h-5 mr-2" src="../assets/google.jpg" alt=""><span> Google sign in  </span>
+
       </button>
       <button
         class="w-full xs:w-3/5 border rounded-full p-1 text-sm my-4 hover:bg-slate-100"
