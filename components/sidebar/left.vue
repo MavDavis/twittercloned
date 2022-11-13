@@ -18,7 +18,7 @@
       <span class="ml-3 lg:block hidden">More</span>
     </div>
     </li>
-    <button class="lg:flex hidden  items-center justify-center w-40 relative py-2 text-sm rounded-full my-1 hover:bg-dim-600 bg-dim-500 text-white ">Tweet</button>
+    <button v-if="loggedIn" class="lg:flex hidden  items-center justify-center w-40 relative py-2 text-sm rounded-full my-1 hover:bg-dim-600 bg-dim-500 text-white ">Tweet</button>
   </ul>
 </nav>
     </div>
