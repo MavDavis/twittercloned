@@ -1,4 +1,5 @@
 <template>
+<div class="w-full">
   <register :logo="true" @closeModal="closeModal">
     <div class="flex justify-start px-4 pl-16 w-full">
       <div class="w-fit"><page-header name="Create your account" /></div>
@@ -29,6 +30,7 @@
     <p class="text-sm w-3/4">This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
     </div>
   </register>
+</div>
 </template>
 
 <script setup>

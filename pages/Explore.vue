@@ -12,7 +12,7 @@
       <div class="w-fit"><page-header name="New to Twitter" /></div>
     </div>
     <div class="flex flex-col items-center w-full  mx-auto px-4 ">
-      <button
+      <button @click="signGoogle()"
         class="w-full xs:w-3/5 flex justify-center  border rounded-full p-1 text-sm col hover:border-dim-100"
       >
       <img class="h-5 h-5 mr-2" src="../assets/google.jpg" alt=""><span> Google sign in  </span>
@@ -39,7 +39,31 @@
     </template>
     
     <script setup>
-const signUpClicked = ref(false)
+    // import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+    // import { firebaseAuth } from "../firebase"
+
+    const signUpClicked = ref(false)
+
+
+// function signGoogle(){
+// signInWithPopup(firebaseAuth, provider)
+//   .then((result) => {
+//     // This gives you a Google Access Token. You can use it to access the Google API.
+//     const credential = GoogleAuthProvider.credentialFromResult(result);
+//     const token = credential.accessToken;
+//     // The signed-in user info.
+//     const user = result.user;
+//     // ...
+//   }).catch((error) => {
+//     // Handle Errors here.
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // The email of the user's account used.
+//     const email = error.customData.email;
+//     // The AuthCredential type that was used.
+//     const credential = GoogleAuthProvider.credentialFromError(error);
+//     // ...
+//   })}
 const signUpClickOn = ()=>{
   signUpClicked.value = true
 }
